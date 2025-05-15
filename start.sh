@@ -14,7 +14,7 @@ echo "Creating 'laravel' database if it doesn't exist..."
 mysql -u root -e "CREATE DATABASE IF NOT EXISTS laravel;"
 
 # Go to the Laravel project directory
-cd /var/www/html/laravelVanila-demo
+cd /var/www/html/laravel-demo
 
 # Check if .env exists; if not, copy .env.example to .env
 if [ ! -f .env ]; then
