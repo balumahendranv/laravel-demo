@@ -35,9 +35,9 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 
 # Set working directory and clone app
 WORKDIR /var/www/html
-RUN git clone https://github.com/balumahendranv/laravelVanila-demo.git
+RUN git clone https://github.com/balumahendranv/laravel-demo.git
 
-WORKDIR /var/www/html/laravelVanila-demo
+WORKDIR /var/www/html/laravel-demo
 
 # Install Laravel dependencies and generate app key
 RUN cp .env.example .env && composer install --no-interaction --prefer-dist && php artisan key:generate
@@ -56,11 +56,8 @@ RUN mkdir -p /var/run/mysqld && chown mysql:mysql /var/run/mysqld
 
 # Set entrypoint
 RUN chmod +x start.sh
-CMD ["/var/www/html/laravelVanila-demo/start.sh"]
+CMD ["/var/www/html/laravel-demo/start.sh"]
 
 # Expose ports
-<<<<<<< HEAD
 EXPOSE 80 3306
-=======
-EXPOSE 80 3306
->>>>>>> 0da2a5ef7f5055e1d9b72a211ae4da14122ca85c
+
