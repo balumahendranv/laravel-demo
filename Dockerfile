@@ -35,7 +35,7 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 
 # Set working directory and clone app
 WORKDIR /var/www/html
-RUN git clone https://github.com/balumahendranv/laravelVanila-demo.git
+RUN git clone https://github.com/balumahendranv/laravel-demo.git
 
 WORKDIR /var/www/html/laravel-demo
 
